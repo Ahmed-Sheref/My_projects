@@ -1,28 +1,3 @@
-// Purpose: To perform arithmetic operations on rational numbers and display results as fractions and decimals.
-// The algorithm of this code is below
-// section => s21 , s22
-
-// Author1: Ahmed Sheref Sayed    ID:20230542    Email:ahmedsheref2288@yahoo.com  
-/*
-  Menu from programming, Dividing a fraction into a numerator, a denominator, and Handle negative numbers
-  Dealing with integers
-  performing arithmetic => addition
-*/
-
-// Author2: Youssef Yasser El-sayed   ID:20230519  Email:yoyoyasso19@gmail.com
-/*
-  performing arithmetic =>  multiplication and division by fractions
-*/ 
-
-// Author3: Hassan Walid Hassan     ID:20230544    Email:hassan.moselhy22@gmail.com 
-/*
-  validation input
-  performing arithmetic => subtraction
-*/ 
-
-// Version: 1.0
-// Date: 17 March 2024
-
 
 #include <iostream> 
 #include <vector> 
@@ -75,10 +50,10 @@ int main()
     
     // Get valid input from user
     
-    // >>>>>>>>>>>>>>>>>> (Part about Hassan Walid) <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    
     string number = getValidInput(); 
     string num_not_sp = remove_spaces(number); 
-    // ****************** (End Part about Hassan Walid) ************************************
+    
 
     // >>>>>>>>>>>>>>>>>> (Part about Ahmed Sheref) <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
@@ -226,8 +201,7 @@ int main()
         cout << "Result in Fraction: " << sum_nem / gc << '/' << mult_den / gc; // Output the result as a fraction
         cout << " ==>> " << sum_nem / mult_den; // Output the result as a decimal
         break;
-    // ******************** (End Part about Ahmed Sheref) ************************************
-    // ******************** (Part about Hassan Walid ) ***************************************
+   
       case '-': // Subtraction operation
         mult_den = stod(num1_den) * stod(num2_den); // Calculate the common denominator
         sum_nem = (stod(num2_den) * stod(num1_nem)) - (stod(num1_den) * stod(num2_nem)); // Calculate the difference of numerators
@@ -235,8 +209,7 @@ int main()
         cout << "Result in Fraction: " << sum_nem / gc << '/' << mult_den / gc; // Output the result as a fraction
         cout << " ==>> " << sum_nem / mult_den; // Output the result as a decimal
         break;
-    // ******************** (End Part about Hassan Walid) ************************************
-    // ******************** (Part about Youssef Yasser) **************************************
+    
       case '*': // Multiplication operation
         mult_den = stod(num1_den) * stod(num2_den); // Calculate the new denominator
         sum_nem = (stod(num2_nem) * stod(num1_nem)); // Calculate the new numerator
@@ -253,8 +226,7 @@ int main()
         cout << "Result in Fraction: " << mult_den / gc << '/' << sum_nem / gc; // Output the result as a fraction
         cout << " ==>> " << mult_den / sum_nem; // Output the result as a decimal
         break;
-      // ******************** (End Part about Youssef Yasser) ********************************
-    }
+      
     cout << "\n\n"; // Add newlines for clarity
   }
 }
